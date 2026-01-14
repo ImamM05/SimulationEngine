@@ -1,5 +1,5 @@
-#ifndef AGENTS_H
-#define AGENTS_H
+#ifndef AGENT_H
+#define AGENT_H
 #include <string>
 
 namespace AI_Agents {
