@@ -2,7 +2,7 @@
 
 namespace World {
     City::City(const std::vector<std::string>& inv) {
-        cityInventory = new FreqMap();
+        cityInventory = FreqMap();
         for (unsigned int i = 0; i < inv.size(); i++) {
             cityInventory[inv.at(i)]++;
         }
