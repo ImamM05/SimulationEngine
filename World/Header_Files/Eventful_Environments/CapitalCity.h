@@ -6,12 +6,14 @@
 namespace World {
     class CapitalCity : public City {
         private:
-            const int intent[Constants_CapitalCity::MAX_INTENT];
+            const char* intents[Constants_CapitalCity::MAX_INTENT];
+            void shopForWeapons(const std::string &agentName);
+            void shopForGear(const std::string &agentName);
+            void shopForFood(const std::string &agentName); 
         public:
-            void visitLandMark() override;
-            void goShopping() override;
-            
-
+            CapitalCity(const std::vector<std::string> &inv, std::string name, const char* intents[], const int arrLength);
+            void visitLandMark(const std::string &agentName) override;
+            void goShopping(const std::string &agentName) override;
     };
 }
 
