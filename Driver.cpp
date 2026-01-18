@@ -1,11 +1,18 @@
 #include <ctime>
 #include "World/Header_Files/City.h"
 #include "World/Header_Files/Eventful_Environments/CapitalCity.h"
-#include <ctime>
+#include <iostream>
+#include <string>
 
 int main() {
     std::vector<std::string> cityInventory = {"item1", "item2"};
-    World::City* capitalCity = new World::CapitalCity();
+    const char* const INTENTS[] = {"thief", "wanderer"};
+    std::string cityName = "Gran Chaos Empire";
+    World::City* capitalCity = new World::CapitalCity(cityInventory, cityName, INTENTS, 2);
 
+    std::string dummyAgentName = "Sam";
+    capitalCity->goShopping(dummyAgentName);
+
+    delete capitalCity;
     return 0;
 }
