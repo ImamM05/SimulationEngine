@@ -19,7 +19,31 @@ namespace World {
         }
     }
 
+    void City::printInventory() {
+        std::cout << "The current inventory of " << cityName << ": [";
+        for (const std::pair<std::string, int> &pair : cityInventory) {
+            std::cout << pair.first << " x" << pair.second << ", ";
+        }
+        std::cout << "]";
+
+    }
+
     void City::pickUpItem(const std::string &agentName) {
-        
+        int randomNum = (rand()%5) + 1;
+
+        switch(randomNum) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            default:
+                std::cout << "Error: pickUpItem() function did not behave as expected." << std::endl;
+        }
     }
 }
