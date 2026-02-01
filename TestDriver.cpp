@@ -13,6 +13,7 @@ int main() {
     World::City* capitalCity = new World::CapitalCity(cityInventory, cityName, INTENTS, 2);
 
     std::string dummyAgentName = "Sam";
+    capitalCity->cityIntro(dummyAgentName);
     capitalCity->goShopping(dummyAgentName);
 
     delete capitalCity;

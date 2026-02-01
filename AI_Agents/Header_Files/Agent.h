@@ -6,11 +6,11 @@ namespace AI_Agents {
     struct Agent {
         std::string name;
         std::string personality;
+        int location;
         int action;
-        Agent(const std::string& name, const std::string& personality);
-        ~Agent() = default;
+        Agent(const std::string& name, const std::string& personality, const int& location);
         virtual void setAction(const int& intentValue) = 0;
-        
+        virtual int getLocation() = 0;
     };
 }
 

@@ -1,12 +1,15 @@
 #include "../../Header_Files/Eventful_Environments/CapitalCity.h"
 
 namespace World {
-    CapitalCity::CapitalCity(const std::vector<std::string> &inv, std::string name, const char* const intents[], const int arrayLen) : 
+    CapitalCity::CapitalCity(const std::vector<std::string> &inv, std::string name, const char* const intents[], const int ittArrayLen) : 
     City(inv, name)
     {
         // this->intents returns the full array while intents (from the param) is a ptr to the first element 
-        for (unsigned int i = 0; i < arrayLen; i++) {
+        for (unsigned int i = 0; i < ittArrayLen; i++) {
             this->intents[i] = intents[i];
+        }
+        for (std::string item : inv) {
+            invAddItem(item);
         }
     }
 

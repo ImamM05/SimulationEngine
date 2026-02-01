@@ -21,8 +21,8 @@ namespace World {
 
     void City::printInventory() {
         std::cout << "The current inventory of " << cityName << ": [";
-        for (const std::pair<std::string, int> &pair : cityInventory) {
-            std::cout << pair.first << " x" << pair.second << ", ";
+        for (const std::pair<std::string, int> &invPair : cityInventory) {
+            std::cout << invPair.first << " x" << invPair.second << ", ";
         }
         std::cout << "]";
 
