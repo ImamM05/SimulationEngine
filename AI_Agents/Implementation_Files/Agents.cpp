@@ -11,5 +11,17 @@ namespace AI_Agents {
         return this->location;
     }
 
+    std::string Agent::getName() {
+        return this->name;
+    }
+
+    std::string Agent::getPersonality(){
+        return this->personality;
+    }
+
+    void Agent::setLocation(const int& location) {
+        this->location = location;
+    }
+
     
 }
