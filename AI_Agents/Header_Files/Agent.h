@@ -10,7 +10,7 @@ namespace AI_Agents {
         int action;
         Agent(const std::string& name, const std::string& personality, const int& location);
         virtual void setAction(const int& intentValue) = 0;
-        virtual int getLocation() = 0;
+        int getLocation();
     };
 }
 

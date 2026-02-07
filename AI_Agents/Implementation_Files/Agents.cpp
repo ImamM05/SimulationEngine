@@ -6,4 +6,10 @@ namespace AI_Agents {
         this->personality = personality;
         this->location = location;
     }
+
+    int Agent::getLocation() {
+        return this->location;
+    }
+
+    
 }
