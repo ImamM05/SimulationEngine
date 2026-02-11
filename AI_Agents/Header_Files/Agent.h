@@ -16,6 +16,7 @@ namespace AI_Agents {
             std::string getName();
             std::string getPersonality();
             void setLocation(const int& location);
+            virtual void changeLocation() = 0;
     };
 }
 

@@ -7,12 +7,15 @@ namespace Engine {
 
     void Simulation::changeLocation(AI_Agents::Agent& agent) {
         // simple random # gen which changes ai agent to either in capital city or not
-        int newLocID = rand() % 4;
+        int newLocIDGen;
+        int newLocID;
 
         std::string agentLocation = Constants_Location::LOCATIONS.at(agent.getLocationID());
 
         switch (agent.getLocationID()) {
-            case Constants_Location::CAP_CITY_LC_ID:
+            case static_cast<int>(Constants_Location::LocationIDs::CAP_CITY_ID):
+                newLocIDGen = rand() % 4;
+                newLocID = Constants_Location::CAP_CITY_LC[newLocIDGen];
                 if (agent.getLocationID() != newLocID){
                     agent.setLocation(newLocID);
                     std::cout << agent.getName() << " has moved to " << agentLocation << "!" << std::endl;
