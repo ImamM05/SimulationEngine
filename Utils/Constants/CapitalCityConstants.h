@@ -1,7 +1,7 @@
 #ifndef CAPITALCITYCONSTANTS_H
 #define CAPITALCITYCONSTANTS_H
 
-namespace Constants_CapitalCity {
+namespace CapitalCityConstants {
     const char* const INTENTS[] = {"thief", "traveler", "adventurer"};
     const char* const SHOP_CHOICES[] = {"weapon", "food", "gear"};
 

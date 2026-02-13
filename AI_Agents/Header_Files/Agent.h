@@ -1,6 +1,7 @@
 #ifndef AGENT_H
 #define AGENT_H
 #include <string>
+#include <iostream>
 
 namespace AI_Agents {
     class Agent {
@@ -16,7 +17,7 @@ namespace AI_Agents {
             std::string getName();
             std::string getPersonality();
             void setLocation(const int& location);
-            virtual void changeLocation() = 0;
+            virtual void moveAgent() = 0;
     };
 }
 
