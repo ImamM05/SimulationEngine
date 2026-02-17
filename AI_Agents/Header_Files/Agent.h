@@ -2,6 +2,7 @@
 #define AGENT_H
 #include <string>
 #include <iostream>
+#include <cstdlib>
 
 namespace AI_Agents {
     class Agent {

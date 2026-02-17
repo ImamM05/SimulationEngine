@@ -7,24 +7,13 @@ namespace AI_Agents{
 
     void Wanderer::moveAgent() {
         int newLocIDGen;
-        int newLocID;
+        std::string newLocID;
 
-        std::string agentLocation = Constants_Location::LOCATIONS.at(getLocationID());
+        std::string agentLocation = LocationConstants::LOCATIONS.at(getLocationID());
 
-        switch (getLocationID()) {
-            case static_cast<int>(Constants_Location::LocationIDs::CAP_CITY_ID):
-                newLocIDGen = rand() % 4;
-                newLocID = Constants_Location::CAP_CITY_LC[newLocIDGen];
-                if (getLocationID() != newLocID){
-                    setLocation(newLocID);
-                    std::cout << getName() << " has moved to " << agentLocation << "!" << std::endl;
-                }
-                else {
-                    std::cout << getName() << " has remained in " << agentLocation << "!" << std::endl;
-                }
-                break;
-            default:
-                std::cout << "Error: " << getName() << " failed to change location." << std::endl;
+        if(getLocationID() == LocationIDs::CAP_CITY_ID) {
+            newLocIDGen = rand()%4
+
         }
     }
 }

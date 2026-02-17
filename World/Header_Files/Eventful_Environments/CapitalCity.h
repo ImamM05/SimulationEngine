@@ -6,7 +6,7 @@
 namespace World {
     class CapitalCity : public City {
         private:
-            const char* intents[Constants_CapitalCity::MAX_INTENT];
+            const char* intents[CapitalCityConstants::MAX_INTENT];
             void shopForWeapons(const std::string &agentName);
             void shopForGear(const std::string &agentName);
             void shopForFood(const std::string &agentName); 
